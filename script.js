@@ -82,4 +82,88 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         observer.observe(card);
     });
+
+    // Modal functionality
+    const modal = document.getElementById('bookingModal');
+    const openModalBtn = document.getElementById('openBookingModal');
+    const closeModalBtn = document.querySelector('.close-modal');
+    let calendarInstance;
+
+    // Initialize calendar
+    const initCalendar = (mode) => {
+        if (calendarInstance) calendarInstance.destroy();
+
+        calendarInstance = flatpickr("#calendar", {
+            mode: mode,
+            minDate: "2025-07-01",
+            maxDate: "2025-08-31",
+            dateFormat: "Y-m-d",
+            locale: {
+                firstDayOfWeek: 1,
+                weekdays: {
+                    shorthand: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+                    longhand: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+                },
+                months: {
+                    shorthand: ["Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+                    longhand: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+                }
+            },
+            onChange: function(selectedDates, dateStr) {
+                const hiddenInput = document.getElementById('selectedDates');
+                hiddenInput.value = mode === 'range'
+                    ? dateStr
+                    : selectedDates.map(d => d.toISOString().split('T')[0]).join(', ');
+            }
+        });
+    };
+
+    // Listen for mode changes
+    document.querySelectorAll('input[name="mode"]').forEach((el) => {
+        el.addEventListener('change', (e) => {
+            initCalendar(e.target.value);
+        });
+    });
+
+    // Open modal
+    openModalBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        // Initialize calendar when modal opens
+        initCalendar('multiple');
+    });
+
+    // Close modal when clicking the close button
+    closeModalBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        // Destroy calendar instance when modal closes
+        if (calendarInstance) {
+            calendarInstance.destroy();
+        }
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            // Destroy calendar instance when modal closes
+            if (calendarInstance) {
+                calendarInstance.destroy();
+            }
+        }
+    });
+
+    // Close modal when pressing Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            // Destroy calendar instance when modal closes
+            if (calendarInstance) {
+                calendarInstance.destroy();
+            }
+        }
+    });
 }); 
