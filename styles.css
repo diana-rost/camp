@@ -166,7 +166,7 @@ h1, h2, h3 {
 
 .hero-feature i {
     font-size: 32px;
-    color: #004AAD;
+    color: #F6713F !important;
     background: rgba(0, 74, 173, 0.1);
     width: 70px;
     height: 70px;
@@ -1392,13 +1392,10 @@ h1, h2, h3 {
         font-size: 17px;
     }
 
-    .hero-description {
-        padding: 30px 0;
-    }
-
     .hero-description p {
         font-size: 22px;
         line-height: 1.8;
+        margin-top: 0;
     }
 
     body {
