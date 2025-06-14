@@ -859,105 +859,139 @@ h3 { font-size: var(--font-size-h3); }
 
 /* Review Section */
 .review {
-    padding-bottom: 25px;
-    padding-bottom: 50px;
-    background-color: var(--light-bg);
+    padding: var(--spacing-xl) 0;
+    background: var(--light-bg);
 }
 
 .review .carousel-container {
     position: relative;
-    max-width: 800px;
-    margin: 25px auto 0;
-    overflow: visible;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .review .carousel {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: auto;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .review .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    will-change: transform;
 }
 
 .review .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--white);
-    padding: 20px;
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    padding: 0 var(--spacing-sm);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .review .carousel-slide img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 80vh;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .review .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--white);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    color: #004AAD;
-    transition: all 0.3s ease;
-    z-index: 2;
-}
-
-.review .carousel-button:hover {
-    background: var(--white);
-    color: #F6713F;
+    box-shadow: var(--shadow);
+    z-index: 10;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .review .carousel-button.prev {
-    left: 20px;
+    left: var(--spacing-sm);
 }
 
 .review .carousel-button.next {
-    right: 20px;
+    right: var(--spacing-sm);
 }
 
 .review .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    position: absolute;
-    bottom: -40px;
-    left: 0;
-    right: 0;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
 }
 
 .review .dot {
-    width: 12px;
-    height: 12px;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
-    background: rgba(0, 74, 173, 0.3);
+    background: var(--secondary-color);
+    opacity: 0.3;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .review .dot.active {
-    background: #004AAD;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .review .carousel-slide {
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .review .carousel-button {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .review .carousel-slide img {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .review .carousel {
+        margin: 0 -1rem;
+        width: calc(100% + 2rem);
+    }
+    
+    .review .carousel-slide {
+        padding: 0 0.5rem;
+    }
+    
+    .review .carousel-button {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    
+    .review .carousel-slide img {
+        max-height: 50vh;
+    }
 }
 
 /* Cost Section */

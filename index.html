@@ -341,14 +341,18 @@
               title="Map location"
               importance="low"
               fetchpriority="low"
-              onerror="this.onerror=null; this.src='images/map-fallback.jpg';"
-              onload="this.style.opacity='1'"
-              style="opacity: 0; transition: opacity 0.3s ease-in-out;">
+              onerror="this.onerror=null; this.src='images/map-fallback.jpg'; this.style.opacity='1';"
+              onload="this.style.opacity='1';"
+              style="opacity: 0; transition: opacity 0.3s ease-in-out;"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
             </iframe>
+            <noscript>
+              <img src="images/map-fallback.jpg" alt="Map location" style="width: 100%; height: 450px; object-fit: cover;">
+            </noscript>
           </div>
         </div>
       </div>
-  </section>
+    </section>
   </main>
 
   <footer class="footer">
