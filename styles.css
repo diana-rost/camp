@@ -185,6 +185,9 @@ h3 { font-size: var(--font-size-h3); }
     color: var(--primary-text-color);
 }
 
+.new{
+    color:red;
+}
 
 .hero-cta {
     display: flex;
@@ -206,7 +209,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .cta-button.primary {
-    background: var(--primary-color);
+    background: #4CAF50;  
     color: var(--white);
 }
 
@@ -322,6 +325,10 @@ h3 { font-size: var(--font-size-h3); }
     color: #004AAD;
     padding-left: 0;
     margin-top: var(--spacing-lg);
+}
+
+.bron{
+    
 }
 
 /* About Section */
