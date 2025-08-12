@@ -1225,10 +1225,19 @@ h3 { font-size: var(--font-size-h3); }
     background: rgba(0, 74, 173, 0.1);
 }
 
+.flatpickr-months {
+    display: flex;
+    align-items: center;
+}
+
 .flatpickr-months .flatpickr-month {
     background: #004AAD;
     color: white;
-    padding: 10px 0;
+    /* padding: 10px 0; */
+}
+
+.flatpickr-current-month {
+    padding: 0 !important;
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {
