@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal functionality
     const modal = document.getElementById('bookingModal');
-    const openModalBtn = document.getElementById('openBookingModal');
+    const openModalTopBtn = document.getElementById('openBookingTopModal');
+    const openModalBottomBtn = document.getElementById('openBookingBottomModal');
     const closeModalBtn = document.querySelector('.close-modal');
     let calendarInstance;
 
@@ -112,7 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Open modal
-    openModalBtn.addEventListener('click', function() {
+    openModalTopBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        // Initialize calendar when modal opens
+        initCalendar('multiple');
+    });
+
+    // Open modal
+    openModalBottomBtn.addEventListener('click', function() {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
         // Initialize calendar when modal opens
