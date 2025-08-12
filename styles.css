@@ -219,6 +219,10 @@ h3 { font-size: var(--font-size-h3); }
     color: var(--primary-color);
 }
 
+.bron {
+    margin-top: 10px;
+}
+
 /* Tablet and up */
 @media (min-width: 48rem) {
     :root {
@@ -1012,7 +1016,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .cost-text {
-    text-align: center;
+    text-align: start;
 }
 
 .price-item {
@@ -1284,6 +1288,9 @@ h3 { font-size: var(--font-size-h3); }
     margin-top: 4px;
 }
 
+.payment-item .fa-calendar-check {
+    padding-top: 5px;
+}
 /* Media Queries */
 @media (max-width: 1024px) {
     .program-cards {
