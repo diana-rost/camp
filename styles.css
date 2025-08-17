@@ -7,12 +7,16 @@
 
 :root {
     /* Colors */
+    --main-color:#FFF8F1;
     --primary-color: #F6713F;
-    --secondary-color: #004AAD;
-    --primary-text-color: #F6713F;
-    --secondary-text-color: #004AAD;
+    --secondary-color: #0292DB;
+    --primary-text-color: #555555;
+    --primary-btn-color:#28A745;
+    --white: #FDFDFD;
     --light-bg: #f5f5f5;
-    --white: #ffffff;
+
+    /* --secondary-text-color:#555555;
+     */
     --shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
     
     /* Typography */
@@ -45,7 +49,7 @@ html {
 }
 
 body {
-    font-family:Fredoka;
+    font-family:Open Sans;
     line-height: var(--line-height);
     color: var(--secondary-text-color);
     font-size: var(--font-size-base);
@@ -53,9 +57,13 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: Fredoka;
+    font-family: serif;
     font-weight: 700;
     line-height: 1.2;
+}
+
+h2, h3{
+    color:var(--secondary-color);
 }
 
 h1 { font-size: var(--font-size-h1); }
@@ -141,17 +149,20 @@ h3 { font-size: var(--font-size-h3); }
 
 .hero h1 {
     margin-bottom: var(--spacing-md);
-    color: #F6713F;
+    color: var(--primary-color);
+    font-weight: 800; 
+    line-height: 1.2; 
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-lg);
-    color: #004AAD;
+    color: var(--secondary-color);
 }
 
 .hero-features {
     display: grid;
+    color: var(--primary-color);
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
@@ -163,12 +174,12 @@ h3 { font-size: var(--font-size-h3); }
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-xs);
+    color: var(--secondary-color);
 }
 
-.hero-feature i {
+.hero-feature .fas {
     font-size: 2rem;
-    color: var(--primary-text-color);
-    background: rgba(0, 74, 173, 0.1);
+    color: var(--primary-color);
     width: 4.375rem;
     height: 4.375rem;
     border-radius: 50%;
@@ -184,7 +195,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .hero-feature .svg-inline--fa {
-    color: var(--primary-text-color);
+    color: var(--primary-color);
 }
 
 
@@ -208,7 +219,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .cta-button.primary {
-    background: #4CAF50;  
+    background: var(--primary-color);  
     color: var(--white);
 }
 
@@ -240,7 +251,7 @@ h3 { font-size: var(--font-size-h3); }
 
     .nav-links a {
         text-decoration: none;
-        color: #004AAD;
+        color: var(--secondary-color);
         font-size: 1.25rem;
         transition: color 0.3s;
     }
@@ -274,7 +285,7 @@ h3 { font-size: var(--font-size-h3); }
     }
 
     .hero-features {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);        
     }
 
     .hero-content {
@@ -320,26 +331,15 @@ h3 { font-size: var(--font-size-h3); }
     margin-bottom: 25px;
     line-height: 1.8;
     font-size: var(--font-size-base);
-    color: #F6713F;
-    font-family: Fredoka;
+    color: (--);
+    font-family: Open Sans;
 }
 
 .hero-description p:last-child {
-    /* font-style: italic; */
-    color: #004AAD;
+    color: var(--primary-color);
     padding-left: 0;
     margin-top: var(--spacing-lg);
 }
-
-/* About Section */
-/* .about {
-    padding: var(--spacing-xl) 0;
-} */
-
-/* .about-content {
-    display: grid;
-    gap: var(--spacing-lg);
-} */
 
 .about-image img {
     width: 100%;
@@ -354,7 +354,7 @@ h3 { font-size: var(--font-size-h3); }
 .about-text p {
     margin-bottom: var(--spacing-md);
     font-size: var(--font-size-base);
-    color: var(--primary-text-color);
+    color: var(--primary-color);
 }
 
 /* Features Section */
@@ -373,6 +373,7 @@ h3 { font-size: var(--font-size-h3); }
     align-items: center;
     gap: var(--spacing-sm);
     font-size: var(--font-size-base);
+    color: var(--secondary-color);
 }
 
 .features li::before {
@@ -381,6 +382,7 @@ h3 { font-size: var(--font-size-h3); }
     font-weight: bold;
 }
 
+.features
 /* Programs Section */
 .programs {
     padding: var(--spacing-xl) 0;
@@ -419,6 +421,7 @@ h3 { font-size: var(--font-size-h3); }
 .program-card p {
     padding: 0 var(--spacing-md) var(--spacing-md);
     font-size: var(--font-size-base);
+    color: var(--primary-color);
 }
 
 /* Schedule Section */
@@ -435,10 +438,12 @@ h3 { font-size: var(--font-size-h3); }
     padding: var(--spacing-md);
     background: var(--white);
     border-radius: var(--border-radius-sm);
+    color: var(--primary-color);
 }
 
 .schedule-item .time {
     font-weight: bold;
+    color: var(--secondary-color);
 }
 
 .schedule-item .activity {
@@ -537,7 +542,7 @@ h3 { font-size: var(--font-size-h3); }
 /* Footer */
 .footer {
     background: var(--secondary-text-color);
-    color: var(--white);
+    color: var(--secondary-color);
     padding: var(--spacing-xl) 0;
 }
 
@@ -553,7 +558,7 @@ h3 { font-size: var(--font-size-h3); }
 
 .footer-logo {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -566,7 +571,7 @@ h3 { font-size: var(--font-size-h3); }
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-sm);
-    background: #25D366;
+    background: var(--primary-color);
     color: var(--white);
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius-md);
@@ -688,7 +693,7 @@ h3 { font-size: var(--font-size-h3); }
     margin-bottom: 25px;
     line-height: 1.8;
     font-size: var(--font-size-base);
-    /* color: #F6713F; */
+    /* color: ; */
     text-align: justify;
     font-family: Fredoka;
 }
@@ -710,7 +715,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .program-card {
-    background: var(--white);
+    background:var(--light-bg);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -731,13 +736,14 @@ h3 { font-size: var(--font-size-h3); }
     padding: 20px 20px 10px;
     font-size: 34px;
     font-family: Fredoka;
+    font-weight: 800;
 }
 
 .program-card p {
     padding: 0 20px 20px;
     font-size: var(--font-size-base);
     font-family: Fredoka;
-    color: #004AAD;
+    color: var(--secondary-color);
 }
 
 /* Gallery Section */
@@ -1029,7 +1035,7 @@ h3 { font-size: var(--font-size-h3); }
 
 .price-label {
     font-size: 32px;
-    color: #004AAD;
+    color:var(--secondary-color);
     font-family: Fredoka;
     font-weight: 600;
 }
