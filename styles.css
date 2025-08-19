@@ -12,7 +12,8 @@
     --secondary-color: #0292DB;
     --primary-text-color: #555555;
     --primary-btn-color:#28A745;
-    --white: #FDFDFD;
+    /* --white: #FDFDFD; */
+    --white:#FFF8F1;
     --light-bg: #f5f5f5;
 
     /* --secondary-text-color:#555555;
@@ -57,7 +58,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: serif;
+    font-family: Open Sans;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -231,7 +232,10 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .bron {
-    margin-top: 10px;
+    margin-top: 1.4rem;
+    color:var(--primary-text-color);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
 }
 
 /* Tablet and up */
@@ -373,7 +377,7 @@ h3 { font-size: var(--font-size-h3); }
     align-items: center;
     gap: var(--spacing-sm);
     font-size: var(--font-size-base);
-    color: var(--secondary-color);
+    color: var(--primary-text-color);
 }
 
 .features li::before {
@@ -423,6 +427,10 @@ h3 { font-size: var(--font-size-h3); }
     font-size: var(--font-size-base);
     color: var(--primary-color);
 }
+.title-card{
+     color: var(--primary-color);
+}
+
 
 /* Schedule Section */
 .program-schedule {
@@ -542,7 +550,7 @@ h3 { font-size: var(--font-size-h3); }
 /* Footer */
 .footer {
     background: var(--secondary-text-color);
-    color: var(--secondary-color);
+    color: var(--primary-text-color);
     padding: var(--spacing-xl) 0;
 }
 
@@ -560,6 +568,7 @@ h3 { font-size: var(--font-size-h3); }
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
+    color:var(--secondary-color);
 }
 
 .footer-description {
@@ -671,6 +680,7 @@ h3 { font-size: var(--font-size-h3); }
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
+    margin-bottom:var(--spacing-md);
 }
 
 .transfer-images img:hover {
@@ -680,7 +690,7 @@ h3 { font-size: var(--font-size-h3); }
 .transfer h2 {
     text-align: center;
     font-size: 42px;
-    color: #004AAD;
+    color: var(--secondary-color);
     margin: 20px 0;
 }
 
@@ -695,7 +705,7 @@ h3 { font-size: var(--font-size-h3); }
     font-size: var(--font-size-base);
     /* color: ; */
     text-align: justify;
-    font-family: Fredoka;
+    font-family: Open Sans;
 }
 
 .transfer-text .features {
@@ -735,14 +745,14 @@ h3 { font-size: var(--font-size-h3); }
 .program-card h3 {
     padding: 20px 20px 10px;
     font-size: 34px;
-    font-family: Fredoka;
+    font-family: Open Sans;
     font-weight: 800;
 }
 
 .program-card p {
     padding: 0 20px 20px;
     font-size: var(--font-size-base);
-    font-family: Fredoka;
+    font-family: Open Sans;
     color: var(--secondary-color);
 }
 
@@ -1036,21 +1046,21 @@ h3 { font-size: var(--font-size-h3); }
 .price-label {
     font-size: 32px;
     color:var(--secondary-color);
-    font-family: Fredoka;
+    font-family: Open Sans;
     font-weight: 600;
 }
 
 .price-value {
     font-size: 42px;
     color: #F6713F;
-    font-family: Fredoka;
+    font-family: Open Sans;
     font-weight: 700;
 }
 
 .price-note {
     font-size: 24px;
-    color: #004AAD;
-    font-family: Fredoka;
+    color: var(--secondary-color);
+    font-family: Open Sans;
     font-style: italic;
 }
 
@@ -1067,14 +1077,17 @@ h3 { font-size: var(--font-size-h3); }
     align-items: flex-start;
     gap: 15px;
     font-size: var(--font-size-base);
-    color: #004AAD;
-    font-family:Fredoka;
+    color: var(--primary-text-color);
+    font-family:Open Sans;
 }
 
-.discount-item i {
+/* .discount-item i {
     color: #F6713F;
     font-size: 32px;
     margin-top: 4px;
+} */
+.booking-formfa-calendar-check{
+    color:var(--primary-color);
 }
 
 .cost-cta {
@@ -1090,7 +1103,7 @@ h3 { font-size: var(--font-size-h3); }
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: Fredoka;
+    font-family: Open Sans;
     box-shadow: var(--shadow);
 }
 
@@ -1131,14 +1144,14 @@ h3 { font-size: var(--font-size-h3); }
     top: 10px;
     font-size: 32px;
     font-weight: bold;
-    color: #004AAD;
+    color: var(--secondary-color);
     cursor: pointer;
     transition: color 0.3s ease;
     z-index: 1;
 }
 
 .close-modal:hover {
-    color: #F6713F;
+    color: var(--primary-color);
 }
 
 @keyframes modalFadeIn {
@@ -1160,9 +1173,9 @@ h3 { font-size: var(--font-size-h3); }
 
 .booking-form h3 {
     font-size: 32px;
-    color: #004AAD;
+    color: var(--secondary-color);
     margin-bottom: 20px;
-    font-family:Fredoka;
+    font-family:Open Sans;
 }
 
 .mode-selection {
@@ -1177,7 +1190,7 @@ h3 { font-size: var(--font-size-h3); }
     align-items: center;
     gap: 8px;
     font-size: 24px;
-    color: #004AAD;
+    color:var(--secondary-color);
     cursor: pointer;
 }
 
@@ -1196,10 +1209,10 @@ h3 { font-size: var(--font-size-h3); }
     max-width: 400px;
     padding: 12px;
     font-size: 24px;
-    border: 2px solid #004AAD;
+    border: 2px solid var(--secondary-color);
     border-radius: 8px;
     text-align: center;
-    color: #004AAD;
+    color:var(--secondary-color);
     font-family:Fredoka;
     cursor: pointer;
 }
@@ -1211,24 +1224,24 @@ h3 { font-size: var(--font-size-h3); }
 
 /* Flatpickr Customization */
 .flatpickr-calendar {
-    font-family: Fredoka;
+    font-family: Open Sans;
     font-size: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .flatpickr-day.selected {
-    background: #004AAD;
-    border-color: #004AAD;
+    background:var(--secondary-color);
+    border-color: #0292DB;
 }
 
 .flatpickr-day.selected:hover {
-    background: #F6713F;
-    border-color: #F6713F;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .flatpickr-day.today {
-    border-color: #F6713F;
+    border-color: var(--primary-color);
 }
 
 .flatpickr-day:hover {
@@ -1241,7 +1254,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .flatpickr-months .flatpickr-month {
-    background: #004AAD;
+    background: var(--secondary-color);
     color: white;
     /* padding: 10px 0; */
 }
@@ -1251,7 +1264,7 @@ h3 { font-size: var(--font-size-h3); }
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {
-    background: #004AAD;
+    background: var(--secondary-color);
     color: white;
 }
 
@@ -1283,19 +1296,19 @@ h3 { font-size: var(--font-size-h3); }
     align-items: flex-start;
     gap: 15px;
     font-size: var(--font-size-base);
-    color: #004AAD;
-    font-family: Fredoka;
+    color: var(--secondary-color);
+    font-family: Open Sans;
     line-height: 1.4;
 }
 
 .payment-item i {
-    color: #F6713F;
     font-size: 28px;
     margin-top: 4px;
 }
 
 .payment-item .fa-calendar-check {
     padding-top: 5px;
+    color:var(--primary-color);
 }
 /* Media Queries */
 @media (max-width: 1024px) {
