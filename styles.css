@@ -238,6 +238,8 @@ h3 { font-size: var(--font-size-h3); }
     font-size: var(--font-size-base);
 }
 
+
+
 /* Tablet and up */
 @media (min-width: 48rem) {
     :root {
@@ -1335,28 +1337,6 @@ h3 { font-size: var(--font-size-h3); }
         grid-template-columns: 1fr;
     }
     
-    /* .hero-text {
-        padding: 40px 0;
-    }
-    
-    .hero h1 {
-        font-size: 66px;
-    }
-    
-    .hero-subtitle {
-        font-size: 28px;
-    }
-    
-    .hero-features {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        gap: 15px;
-    } */
-    
     .cta-button {
         width: 100%;
         text-align: center;
@@ -1578,7 +1558,7 @@ h3 { font-size: var(--font-size-h3); }
     }
     
     .hero-subtitle {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .hero-image {
@@ -1658,7 +1638,7 @@ h3 { font-size: var(--font-size-h3); }
     }
 
     .hero-subtitle {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .hero-feature span {
