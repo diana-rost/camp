@@ -88,6 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
             minDate: currentDate,
             maxDate: "2025-12-31",
             dateFormat: "Y-m-d",
+            disable: [
+                function(date) {
+                    // Disable all days except Saturday (day 6)
+                    return date.getDay() !== 6;
+                }
+            ],
             locale: {
                 firstDayOfWeek: 1,
                 weekdays: {
