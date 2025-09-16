@@ -80,10 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const initCalendar = (mode) => {
         if (calendarInstance) calendarInstance.destroy();
 
+        // Get current date in YYYY-MM-DD format
+        const currentDate = new Date().toISOString().split('T')[0];
+
         calendarInstance = flatpickr("#calendar", {
             mode: mode,
-            minDate: "2025-07-01",
-            maxDate: "2025-08-31",
+            minDate: currentDate,
+            maxDate: "2025-12-31",
             dateFormat: "Y-m-d",
             locale: {
                 firstDayOfWeek: 1,
