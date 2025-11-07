@@ -136,7 +136,7 @@ h3 { font-size: var(--font-size-h3); }
     flex-direction: column;
     min-height: 100vh;
 
-    background-image: url('../images/background_hero_section.jpg');
+    background-image: url('images/background_hero_section.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
