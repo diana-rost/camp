@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calendarInstance = flatpickr("#calendar", {
             mode: mode,
             minDate: currentDate,
-            maxDate: "2025-12-31",
+            maxDate: "2026-02-28",
             dateFormat: "Y-m-d",
             disable: [
                 function(date) {
